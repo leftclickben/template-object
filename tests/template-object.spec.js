@@ -53,11 +53,10 @@
 			});
 		});
 		describe('Using mustache style templates', function () {
-			var templateSettings = { interpolate: /\{\{\s*([\w\.\-]+?)\s*\}\}/g };
 			describe('With valid data', function () {
 				var settings;
 				beforeEach(function () {
-					settings = templateObject(require('./_input/settings-mustache.json'), templateSettings);
+					settings = templateObject(require('./_input/settings-mustache.json'), 'mustache');
 				});
 				it('Does not affect static keys', function () {
 					expect(settings.foo).toBe('bar');
@@ -81,7 +80,7 @@
 				var settings, error;
 				beforeEach(function () {
 					try {
-						settings = templateObject(require('./_input/settings-mustache-with-unresolved.json'), templateSettings);
+						settings = templateObject(require('./_input/settings-mustache-with-unresolved.json'), 'mustache');
 					} catch (e) {
 						error = e;
 					}
