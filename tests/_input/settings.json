@@ -1,0 +1,9 @@
+{
+	"foo": "bar",
+	"expando": "{{ foo }}",
+	"expando2": "{{ expando }}",
+	"expando3": "prefix-{{ foo }}",
+	"expando4": "{{ foo }}-suffix",
+	"expando5": "prefix-{{ foo }}-suffix",
+	"expando6": "{{ unknown }}"
+}

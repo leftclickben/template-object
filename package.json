@@ -1,0 +1,53 @@
+{
+	"name": "template-object",
+	"version": "0.0.1",
+	"description": "Runs underscore's _.template over an object structure.",
+	"keywords": [
+		"template",
+		"recursive",
+		"object",
+		"nested structure",
+		"nested",
+		"structure",
+		"hash"
+	],
+	"bugs": {
+		"url": "https://github.com/leftclickben/template-object/issues"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Ben New",
+		"email": "ben@leftclick.com.au",
+		"url": "http://leftclick.com.au/"
+	},
+	"contributors": [
+		{
+			"name": "Ben New",
+			"email": "ben@leftclick.com.au",
+			"url": "http://leftclick.com.au/"
+		}
+	],
+	"main": "index",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/leftclickben/template-object"
+	},
+	"scripts": {
+		"test": "grunt qa"
+	},
+	"dependencies": {
+		"lodash": "~2.4.1"
+	},
+	"devDependencies": {
+		"jasmine-node": "~1.13.0",
+		"grunt": "~0.4.2",
+		"grunt-cli": "~0.1.13",
+		"grunt-jasmine-node": "~0.1.0",
+		"grunt-jslint": "~1.1.2",
+		"grunt-contrib-watch": "~0.5.3"
+	},
+	"engines": {
+		"node": ">=0.8.0"
+	},
+	"readmeFilename": "README.md"
+}
