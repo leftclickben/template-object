@@ -1,0 +1,12 @@
+{
+	"foo": "bar",
+	"expando": "<%=foo%>",
+	"expando2": "<%=expando%>",
+	"expando3": "prefix-<%=foo%>",
+	"expando4": "<%=foo%>-suffix",
+	"expando5": "prefix-<%=foo%>-suffix",
+	"parent": {
+		"child": "child value"
+	},
+	"nested": "<%=parent.child%>"
+}
