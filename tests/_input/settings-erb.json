@@ -6,7 +6,19 @@
 	"expando4": "<%=foo%>-suffix",
 	"expando5": "prefix-<%=foo%>-suffix",
 	"parent": {
-		"child": "child value"
+		"child": "child value",
+		"x": {
+			"y": {
+				"z": {
+					"deep": "deeply nested value"
+				}
+			}
+		}
 	},
-	"nested": "<%=parent.child%>"
+	"nested": "<%=parent.child%>",
+	"otherParent": {
+		"nested": "<%=parent.child%>",
+		"fromRoot": "<%=foo%>"
+	},
+	"deeplyNested": "<%=parent.x.y.z.deep%>"
 }

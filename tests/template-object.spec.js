@@ -32,6 +32,13 @@
 				});
 				it('Expands dynamic keys that are nested', function () {
 					expect(settings.nested).toBe('child value');
+					expect(settings.deeplyNested).toBe('deeply nested value');
+				});
+				it('Expands dynamic keys that are nested, that refer to a key within a different parent', function () {
+					expect(settings.otherParent.nested).toBe('child value');
+				});
+				it('Expands dynamic keys that are nested, that refer to a key at the root level', function () {
+					expect(settings.otherParent.fromRoot).toBe('bar');
 				});
 			});
 			describe('With invalid data', function () {
@@ -74,6 +81,13 @@
 				});
 				it('Expands dynamic keys that are nested', function () {
 					expect(settings.nested).toBe('child value');
+					expect(settings.deeplyNested).toBe('deeply nested value');
+				});
+				it('Expands dynamic keys that are nested, within a different parent', function () {
+					expect(settings.otherParent.nested).toBe('child value');
+				});
+				it('Expands dynamic keys that are nested, that refer to a key at the root level', function () {
+					expect(settings.otherParent.fromRoot).toBe('bar');
 				});
 			});
 			describe('With invalid data', function () {
