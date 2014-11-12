@@ -58,6 +58,23 @@
 					expect(error.message).toBe('unknown is not defined');
 				});
 			});
+			describe('With data that is invalid due to an unqualified reference (Issue #1)', function () {
+				var settings, error;
+				beforeEach(function () {
+					try {
+						settings = templateObject(require('./_input/settings-erb-with-unqualified-reference.json'));
+					} catch (e) {
+						error = e;
+					}
+				});
+				it('Does not return', function () {
+					expect(settings).toBeUndefined();
+				});
+				it('Throws an error on unresolved reference', function () {
+					expect(error).not.toBeUndefined();
+					expect(error.message).toBe('foo is not defined');
+				});
+			});
 		});
 		describe('Using mustache style templates', function () {
 			describe('With valid data', function () {
@@ -105,6 +122,23 @@
 				it('Throws an error on unresolved reference', function () {
 					expect(error).not.toBeUndefined();
 					expect(error.message).toBe('unknown is not defined');
+				});
+			});
+			describe('With data that is invalid due to an unqualified reference (Issue #1)', function () {
+				var settings, error;
+				beforeEach(function () {
+					try {
+						settings = templateObject(require('./_input/settings-mustache-with-unqualified-reference.json'), 'mustache');
+					} catch (e) {
+						error = e;
+					}
+				});
+				it('Does not return', function () {
+					expect(settings).toBeUndefined();
+				});
+				it('Throws an error on unresolved reference', function () {
+					expect(error).not.toBeUndefined();
+					expect(error.message).toBe('foo is not defined');
 				});
 			});
 		});

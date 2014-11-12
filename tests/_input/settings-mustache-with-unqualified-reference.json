@@ -1,0 +1,7 @@
+{
+	"parent": {
+		"foo": "bar",
+		"child": "value",
+		"expando": "{{ foo }}"
+	}
+}
